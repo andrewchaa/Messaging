@@ -1,0 +1,6 @@
+C:\Users\SUNDANCE\Work\Messaging\HelloWorld\Sender\Sender\bin\Debug\Sender.exe
+C:\Users\SUNDANCE\Work\Messaging\HelloWorld\Sender\Sender\bin\Debug\Sender.pdb
+C:\Users\SUNDANCE\Work\Messaging\HelloWorld\Sender\Sender\bin\Debug\NDesk.Options.dll
+C:\Users\SUNDANCE\Work\Messaging\HelloWorld\Sender\Sender\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\SUNDANCE\Work\Messaging\HelloWorld\Sender\Sender\obj\x86\Debug\Sender.exe
+C:\Users\SUNDANCE\Work\Messaging\HelloWorld\Sender\Sender\obj\x86\Debug\Sender.pdb
