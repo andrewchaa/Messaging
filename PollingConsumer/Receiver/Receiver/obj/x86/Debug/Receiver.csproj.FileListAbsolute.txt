@@ -1,0 +1,8 @@
+C:\Users\SUNDANCE\Work\Messaging\HelloWorld\Receiver\Receiver\bin\Debug\Receiver.exe
+C:\Users\SUNDANCE\Work\Messaging\HelloWorld\Receiver\Receiver\bin\Debug\Receiver.pdb
+C:\Users\SUNDANCE\Work\Messaging\HelloWorld\Receiver\Receiver\bin\Debug\NDesk.Options.dll
+C:\Users\SUNDANCE\Work\Messaging\HelloWorld\Receiver\Receiver\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\SUNDANCE\Work\Messaging\HelloWorld\Receiver\Receiver\obj\x86\Debug\Receiver.exe
+C:\Users\SUNDANCE\Work\Messaging\HelloWorld\Receiver\Receiver\obj\x86\Debug\Receiver.pdb
+C:\Users\SUNDANCE\Work\Messaging\PollingConsumer\Receiver\Receiver\obj\x86\Debug\Receiver.exe
+C:\Users\SUNDANCE\Work\Messaging\PollingConsumer\Receiver\Receiver\obj\x86\Debug\Receiver.pdb
