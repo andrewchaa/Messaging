@@ -6,3 +6,15 @@ C:\Users\SUNDANCE\Work\Messaging\HelloWorld\Receiver\Receiver\obj\x86\Debug\Rece
 C:\Users\SUNDANCE\Work\Messaging\HelloWorld\Receiver\Receiver\obj\x86\Debug\Receiver.pdb
 C:\Users\SUNDANCE\Work\Messaging\PollingConsumer\Receiver\Receiver\obj\x86\Debug\Receiver.exe
 C:\Users\SUNDANCE\Work\Messaging\PollingConsumer\Receiver\Receiver\obj\x86\Debug\Receiver.pdb
+C:\Users\SUNDANCE\Work\Messaging\PollingConsumer\Receiver\Receiver\bin\Debug\Receiver.exe.config
+C:\Users\SUNDANCE\Work\Messaging\PollingConsumer\Receiver\Receiver\bin\Debug\Receiver.exe
+C:\Users\SUNDANCE\Work\Messaging\PollingConsumer\Receiver\Receiver\bin\Debug\Receiver.pdb
+C:\Users\SUNDANCE\Work\Messaging\PollingConsumer\Receiver\Receiver\bin\Debug\log4net.dll
+C:\Users\SUNDANCE\Work\Messaging\PollingConsumer\Receiver\Receiver\bin\Debug\log4net.xml
+C:\Users\SUNDANCE\Work\Messaging\PollingConsumer\Receiver\Receiver\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\SUNDANCE\Work\Messaging\PollingConsumer\Receiver\Receiver\bin\Debug\Topshelf.dll
+C:\Users\SUNDANCE\Work\Messaging\PollingConsumer\Receiver\Receiver\bin\Debug\Topshelf.Log4NetIntegration.dll
+C:\Users\SUNDANCE\Work\Messaging\PollingConsumer\Receiver\Receiver\bin\Debug\Topshelf.pdb
+C:\Users\SUNDANCE\Work\Messaging\PollingConsumer\Receiver\Receiver\bin\Debug\Topshelf.xml
+C:\Users\SUNDANCE\Work\Messaging\PollingConsumer\Receiver\Receiver\bin\Debug\Topshelf.Log4NetIntegration.pdb
+C:\Users\SUNDANCE\Work\Messaging\PollingConsumer\Receiver\Receiver\bin\Debug\Topshelf.Log4NetIntegration.xml
