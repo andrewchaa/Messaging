@@ -5,10 +5,10 @@ using MessageUtilities;
 
 namespace Receiver
 {
-    internal class Consumer : IDisposable
+    internal class Consumer 
     {
         private readonly MessageQueue channel;
-        private readonly Timer timer;
+        private bool isRunning;
 
         public Consumer(string channelName)
         {
@@ -16,37 +16,36 @@ namespace Receiver
             channel = new MessageQueue(channelName) {Formatter = new XmlMessageFormatter(new[] {typeof (string)})};
             //We want to trace message headers such as correlation id, so we need to tell MSMQ to retrieve those
             channel.MessageReadPropertyFilter.SetAll();
-
-            //we use a timer to poll the queue at a regular interval, of course this may need to be re-entrant but we have no state to worry about
-            timer = new Timer(ConfigurationSettings.PollingInterval) {AutoReset = true};
-            timer.Elapsed += Consume;
+            channel.ReceiveCompleted += Consume;
         }
 
         public void Start()
         {
-            timer.Start();
-            Console.WriteLine("Service started, will read queue every {0} ms", ConfigurationSettings.PollingInterval);
+            isRunning = true;
+            Receive();
+            Console.WriteLine("Service started");
         }
+
 
         public void Pause()
         {
-            timer.Stop();
+            isRunning = false;
             Console.WriteLine("Service paused");
         }
 
         public void Stop()
         {
-            timer.Stop();
-            timer.Close();
+            isRunning = false;
             channel.Close();
             Console.WriteLine("Service stopped");
         }
 
-        private void Consume(object state, ElapsedEventArgs args)
+        private void Consume(object source, ReceiveCompletedEventArgs result)
         {
             try
             {
-                var message = channel.Receive(new TimeSpan(TimeSpan.TicksPerSecond*ConfigurationSettings.PollingTimeout));
+                var queue = (MessageQueue) source;
+                var message = queue.EndReceive(result.AsyncResult);
                 if (message != null)
                 {
                     message.TraceMessage();
@@ -56,11 +55,16 @@ namespace Receiver
             {
                 Console.WriteLine("{0} {1}", mqe.Message, mqe.MessageQueueErrorCode);
             }
+
+            Receive();
         }
 
-        public void Dispose()
+        private void Receive()
         {
-           timer.Close(); 
+            if (isRunning)
+            {
+                channel.BeginReceive(new TimeSpan(0, 0, 0, ConfigurationSettings.PollingTimeout));
+            }
         }
     }
 }
