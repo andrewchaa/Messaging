@@ -16,9 +16,9 @@ namespace Sender
                             {"m|message=", m => message = m}
                         };
             p.Parse(args);
-            if (string.IsNullOrEmpty(channel))
+            
+            if (CheckArguments(message, channel))
             {
-                Console.WriteLine("You must provide a channel name");
                 return;
             }
 
@@ -26,6 +26,23 @@ namespace Sender
 
             var producer = new Producer(channelName);
             producer.Send(message);
+        }
+        
+        private static bool CheckArguments(string message, string channel)
+        {
+            bool errors = false;
+            if (string.IsNullOrEmpty(channel))
+            {
+                Console.WriteLine("You must provide a channel");
+                errors = true;
+            }
+
+            if (string.IsNullOrEmpty(message))
+            {
+                Console.WriteLine("You must provide a message");
+                errors = true;
+            }
+            return errors;
         }
     }
 }

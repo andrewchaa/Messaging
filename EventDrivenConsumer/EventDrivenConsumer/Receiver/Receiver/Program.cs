@@ -10,7 +10,7 @@ namespace Receiver
             {
                 host.Service<Consumer>(service =>
                 {
-                    service.SetServiceName("Polling Consumer");
+                    service.SetServiceName("Event Driven Consumer");
                     service.ConstructUsing(name => new Consumer(ConfigurationSettings.ChannelName));
                     service.WhenStarted(consumer => consumer.Start());
                     service.WhenContinued(consumer => consumer.Start());
@@ -18,9 +18,9 @@ namespace Receiver
                     service.WhenStopped(consumer => consumer.Stop());
                 });
                 host.RunAsLocalService();
-                host.SetDisplayName("Simple Polling Message Consumer");
-                host.SetDescription("A simple message consumer that polls for messages");
-                host.SetServiceName("Simple.Polling.Consumer");
+                host.SetDisplayName("Simple Event Driven Message Consumer");
+                host.SetDescription("A simple message consumer that waits for messages");
+                host.SetServiceName("Simple.EventDriven.Consumer");
             });
         }
     }
